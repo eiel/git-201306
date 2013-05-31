@@ -1,0 +1,64 @@
+広島 Git 勉強会
+
+* 失敗できるGit入門
+** 目的
+- 何かをはじめる時に元に戻れないのは怖い
+- ならば怖いこと先にしっておきましょう
+- とみせかけて git checkout と git reset の話をする
+** 対象者
+- Git を使いはじめた人
+- コマンドラインは道具です。怖くありません。
+* 内容
+** 入門
+- echo readme > README.md
+- git init
+- git add .
+- git commit -m 'first commit'
+- echo readyou > README.md
+- git add -u
+- git commit -m 'second commit'
+** 間違えたとき
+- git init したけど最初からやりなおしたい
+- 間違えてファイルを編集した - 元に戻したい
+- 間違えて git add してしまった - 元に戻したい
+- 間違えて commit してしまった - なかったことにしたい
+- git checkout  <- 変更をすてる 危険な作業
+** 危険の定義
+作成した変更が失われしまい、復元できなってしまうこと
+*** 補足
+- 変更を消してしまう危険なコマンドは基本的に失敗する
+** 危険なコマンド
+- git reset --hard
+- git checkout ファイル名
+  - ブランチ名の場合は危険ではないです
+- git clean
+** 少しだけ危険なコマンド
+- git rebase
+- git commit --amend
+** 危険なコマンドをする前に
+- 新しいブランチを作成してコミットをつくりましょう
+- 安全!!
+** git reset & git checkout
+- git reset と git checkout の説明がしたいです
+** ワークツリー
+** インデックス
+** コミット
+- git init
+- git add
+- git commit
+** reset
+カレントブランチがさしてるコミットを変える
+** checkout
+コミットを元にワークツリー を変える
+** 別解
+- 間違えて commit してしまった - 追記したい
+** おまけ
+*** git revert
+- これは「あるコミットがなかったことになるように」 新しいコミットをつくるコマンドです
+*** more info
+- 小さなコミットをまとめて大きなコミットにするのは簡単です。
+- 大きなコミットを小さく分割するのはめんどくさいです。
+- どのようにコミットグラフが変化するかイメージできるようになりましょう
+  - http://pcottle.github.io/learnGitBranching/
+* 時間があまったときのネタ
+https://gist.github.com/Gab-km/3705015
