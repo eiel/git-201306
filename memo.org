@@ -62,3 +62,20 @@
   - http://pcottle.github.io/learnGitBranching/
 * 時間があまったときのネタ
 https://gist.github.com/Gab-km/3705015
+
+** Issue を作る (Github flow は関係ない)
+** Local Branchを作る
+  git checkout -b github-flow-exercise-eiel
+** ブログをかく
+
+** ブログのリンクを貼る
+- 編集するファイル
+  - _posts/2013-6-01-event-002-5.markdown
+- commit する
+** github に pushする
+git push origin github-flow-exercise-eiel
+** github で pull request する
+https://github.com/great-h/great-h.github.io/
+** 3人目のレビューア が merge する
+- 3人目の人はマージしてください
+- 今回の特別ルール
